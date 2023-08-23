@@ -40,10 +40,10 @@ export const authOptions = {
     },
   },
 
-  pages: {
-    signin: "/auth/signin",
-    signOut: "/auth/signout",
-  },
+  // pages: {
+  //   signin: "/auth/signin",
+  //   signOut: "/auth/signout",
+  // },
   secret: process.env.NEXTAUTH_URL,
 };
 
