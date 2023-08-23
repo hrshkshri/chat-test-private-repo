@@ -9,8 +9,6 @@ const Home: NextPage = () => {
   if (status === "authenticated") {
     return <HomePage />;
   }
-  // If session exists, display content
-
   return <Link href="/api/auth/signin">Sign in</Link>;
 };
 
