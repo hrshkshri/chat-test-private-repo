@@ -13,6 +13,7 @@ type ProfileProps = {};
 const Profile = ({}: ProfileProps) => {
   const [visibleSettings, setVisibleSettings] = useState<boolean>(false);
   const { data: session } = useSession();
+  const userName = session?.user?.name;
 
   const menu = [
     {
@@ -65,9 +66,9 @@ const Profile = ({}: ProfileProps) => {
                   <div className="absolute right-0 bottom-0 w-4.5 h-4.5 bg-primary-2 rounded-full border-4 border-n-1 dark:border-n-7"></div>
                 </div>
                 <div className="pl-4">
-                  <div className="h6">Tran Mau Tri Tam</div>
+                  <div className="h6">{userName}</div>
                   <div className="caption1 text-n-4">
-                    Lead visual designer at UI8
+                    {session?.user?.email}
                   </div>
                 </div>
               </div>
